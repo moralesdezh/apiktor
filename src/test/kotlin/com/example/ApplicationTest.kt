@@ -11,7 +11,7 @@ class ApplicationTest {
     fun testRoot() = testApplication {
         client.get("/").apply {
             assertEquals(HttpStatusCode.OK, status)
-            assertEquals("Hello World!", bodyAsText())
+            assertEquals("API is running", bodyAsText())  // Asegúrate de que coincide con el texto de tu ruta raíz
         }
     }
 }
